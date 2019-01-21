@@ -11,7 +11,7 @@ Enjoy responsibly!
 @ihatetomatoes
 
 */
-
+window.scrollBy(0, 1);
 $('#appear1').fadeIn("slow");
 setTimeout(function () {
 	$('#appear2').fadeIn("slow");
