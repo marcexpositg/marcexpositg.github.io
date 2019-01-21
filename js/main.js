@@ -28,10 +28,12 @@ function pageScroll() {
 
 function stopscrolling() {
 	clearTimeout(scrolldelay);
-}
+};
 
-$(document).on("load",function () {
 
+window.onload = function(){
+//$(document).ready(function () {
+	console.log("loaded");
 	//setTimeout(function(){
 	$(document).one("click", function () {
 		$('body').addClass('loaded');
@@ -66,7 +68,10 @@ $(document).on("load",function () {
 				'height': 'auto'
 			});
 			$('#pleaseScroll').fadeIn("slow");
-			setTimeout(function(){pageScroll();},2000);
+			setTimeout(function(){
+				pageScroll();
+				$(document).mousemove(stopscrolling);
+			},2000);
 		}, 5000);
 
 		//	console.log($(window).scrollTop());
@@ -74,7 +79,7 @@ $(document).on("load",function () {
 		//		console.log("Que gran tio");
 		//	}
 
-		$(document).mousemove(stopscrolling);
+		
 
 
 
@@ -86,4 +91,4 @@ $(document).on("load",function () {
 	})
 	//}, 3000);
 
-});
+};
