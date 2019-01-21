@@ -11,6 +11,8 @@ Enjoy responsibly!
 @ihatetomatoes
 
 */
+
+window.scrollBy(0, 1);
 $('#appear1').fadeIn("slow");
 setTimeout(function () {
 	$('#appear2').fadeIn("slow");
@@ -62,12 +64,12 @@ window.onload = function(){
 
 
 		setTimeout(function () {
-			$('html, body').css({
-				'overflow': 'auto',
-				'height': 'auto'
-			});
+			//$('html, body').css({
+			//	'overflow': 'auto',
+			//	'height': 'auto'
+			//});
 			
-			window.scrollBy(0, 1);
+			//window.scrollBy(0, 1);
 
 			$('#pleaseScroll').fadeIn("slow");
 			setTimeout(function(){
