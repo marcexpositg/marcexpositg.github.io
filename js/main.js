@@ -30,7 +30,7 @@ function stopscrolling() {
 	clearTimeout(scrolldelay);
 }
 
-$(document).ready(function () {
+$(document).load(function () {
 
 	//setTimeout(function(){
 	$(document).one("click", function () {
