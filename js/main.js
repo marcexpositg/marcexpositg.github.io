@@ -14,7 +14,7 @@ Enjoy responsibly!
 
 $('#appear1').fadeIn("slow");
 setTimeout(function () {
-	$('#appear2').fadeIn("slow");
+	$('#appear3').fadeIn("slow");
 }, 1000);
 
 function pageScroll() {
@@ -32,8 +32,12 @@ function stopscrolling() {
 
 
 window.onload = function(){
+	$('#appear3').fadeOut("slow");
+setTimeout(function () {
+	$('#appear2').fadeIn("slow");
+}, 1000);
 //$(document).ready(function () {
-	console.log("loaded");
+	//console.log("loaded");
 	//setTimeout(function(){
 	$(document).one("click", function () {
 		$('body').addClass('loaded');
