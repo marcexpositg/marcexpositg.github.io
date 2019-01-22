@@ -61,10 +61,12 @@ window.onload = function(){
 			})
 		}, 3000);
 
-
+		// set overflow to auto to unblock overflow-y:hidden, because this would impedir que baixessim cap enbaix verticalment i que veiessim el text!
+		// Then set overflow-x hidden to block a white empty space on the right
 		setTimeout(function () {
 			$('html, body').css({
-				'overflow': 'auto',
+				'overflow':'auto',
+				'overflow-x': 'hidden',
 				'height': 'auto'
 			});
 			$('#pleaseScroll').fadeIn("slow");
