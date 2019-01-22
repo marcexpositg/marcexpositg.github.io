@@ -70,24 +70,14 @@ window.onload = function(){
 				'height': 'auto'
 			});
 			$('#pleaseScroll').fadeIn("slow");
-			setTimeout(function(){
-				pageScroll();
-				$(document).mousemove(stopscrolling);
-			},2000);
+
+			//This just works sometimes...
+			//setTimeout(function(){
+			//	pageScroll();
+			//	$(document).mousemove(stopscrolling);
+			//},2000);
 		}, 5000);
 
-		//	console.log($(window).scrollTop());
-		//	if ($(window).scrollTop() > "30px") {
-		//		console.log("Que gran tio");
-		//	}
-
-		
-
-
-
-		//$('.carousel').carousel({
-		//			interval: 2000
-		//		  })
 
 
 	})
