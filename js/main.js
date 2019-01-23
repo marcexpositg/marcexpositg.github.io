@@ -31,7 +31,8 @@ function stopscrolling() {
 };
 
 
-window.onload = function(){
+//window.onload = function(){
+	window.addEventListener('load',function(){
 	$('#appear3').fadeOut("slow");
 setTimeout(function () {
 	$('#appear2').fadeIn("slow");
@@ -87,4 +88,4 @@ setTimeout(function () {
 	})
 	//}, 3000);
 
-};
+},false);
