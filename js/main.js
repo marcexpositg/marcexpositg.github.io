@@ -40,7 +40,7 @@ setTimeout(function () {
 //$(document).ready(function () {
 	//console.log("loaded");
 	//setTimeout(function(){
-	$(document).one("click", function () {
+	$('body').one("click", function () {
 		$('body').addClass('loaded');
 		//$('h1').css('color','#222222');
 		$('#loader-recommendation').fadeOut();
