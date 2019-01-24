@@ -12,9 +12,15 @@ Enjoy responsibly!
 
 */
 
+//let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+//	document.addEventListener(touchEvent,function(){
+//		alert("touch!")});	
+
+var apareixerfinal = false;
 $('#appear1').fadeIn("slow");
 setTimeout(function () {
 	$('#appear3').fadeIn("slow");
+	var apareixerfinal = true;
 }, 1000);
 
 function pageScroll() {
@@ -32,15 +38,29 @@ function stopscrolling() {
 
 
 //window.onload = function(){
-	window.addEventListener('load',function(){
-	$('#appear3').fadeOut("slow");
-setTimeout(function () {
-	$('#appear2').fadeIn("slow");
-}, 1000);
-//$(document).ready(function () {
+window.addEventListener('load', function () {
+	if (apareixerfinal == true) {
+		console.log("aparegut");
+		$('#appear3').fadeOut("slow");
+		setTimeout(function () {
+			$('#appear2').fadeIn("slow");
+		}, 1000);
+	} else {
+		//if it has loaded before the fade in animation has finished, then wait 1s before adding the go ahead
+		setTimeout(function () {
+			console.log("no aparegut");
+			$('#appear3').fadeOut("slow");
+			setTimeout(function () {
+				$('#appear2').fadeIn("slow");
+			}, 1000);
+		}, 1000)
+	};
+	//$(document).ready(function () {
 	//console.log("loaded");
 	//setTimeout(function(){
-	$('body').one("click", function () {
+	//	document.addEventListener(touchEvent,function({}))	
+	//$(document).one("touchEvent", function () {
+	$(document).one("click touchstart", function () {
 		$('body').addClass('loaded');
 		//$('h1').css('color','#222222');
 		$('#loader-recommendation').fadeOut();
@@ -70,7 +90,7 @@ setTimeout(function () {
 		// Then set overflow-x hidden to block a white empty space on the right
 		setTimeout(function () {
 			$('html, body').css({
-				'overflow':'auto',
+				'overflow': 'auto',
 				'overflow-x': 'hidden',
 				'height': 'auto'
 			});
@@ -88,4 +108,4 @@ setTimeout(function () {
 	})
 	//}, 3000);
 
-},false);
+}, false);
