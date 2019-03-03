@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>Mirant la consola comprova que la funcio Math.round(Math.random) genera un numero 1 o 0 50% vegades i ben distribuit</p>
+    <div id="prova"></div>
+    <script>
+        var numeroaleatori = "";
+        var uns = 0;
+        var zero = 0;
+        for (let index = 0; index < 100; index++) {
+            //console.log(index);
+            numeroaleatori = Math.round(Math.random()); //Math.random fa un numero entre 0 i 1, math.round arrodoneix a 0 si <0.5 i a 1 si >0.5
+            console.log(numeroaleatori);
+            if (numeroaleatori == 1) {
+
+                //console.log(numeroaleatori, "és 1");
+                uns = ++uns;
+            } else {
+                
+                //console.log(numeroaleatori,"és 0");
+                zero = ++zero;
+            }
+        }
+        console.log("zeros: ",zero);
+        console.log("uns: ",uns);
+        
+    </script>
+</body>
+</html>
