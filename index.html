@@ -1,342 +1,262 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
+---
+layout: adapted
+---
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Me</title>
-	<meta name="description" content="Personal page for Marc Expòsit">
-
-	<!--iOS -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.css">
-	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	 crossorigin="anonymous">
-	 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<style type="text/css">
-		/*.back-link a {
-			color: #4ca340;
-			text-decoration: none;
-			border-bottom: 1px #4ca340 solid;
-		}
-
-		.back-link a:hover,
-		.back-link a:focus {
-			color: #408536;
-			text-decoration: none;
-			border-bottom: 1px #408536 solid;
-		}
-
-		h1 {
-			height: 100%;
-			/* The html and body elements cannot have any padding or margin.
-			margin: 0;
-			font-size: 14px;
-			font-family: 'Open Sans', sans-serif;
-			font-size: 32px;
-			margin-bottom: 3px;
-		}*/
-
-		.entry-header {
-			text-align: center;
-			margin: 0 auto 50px auto;
-			width: 80%;
-			max-width: 978px;
-			position: relative;
-			z-index: 10001;
-			display: block;
-
-			padding-top: 100px;
-		}
-
-		/*#demo-content {
-			padding-top: 100px;
-		}*/
-
-		.carousel-item {
-			height: 100vh;
-			min-height: 350px;
-			background: no-repeat center center scroll;
-			background-color: black;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
-		}
-
-		/*This centers the images when viewing on mobile phone or small screen*/
-		@media only screen and (max-width: 600px) {
-			.carouselGallery {
-				height:100%;
-				position: absolute;
-				left: -50%;
-			}
-
-					#num4, #num5{
-			-webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
-		}
-		}
-		@media only screen and (min-width: 601px) {
-			.carouselGallery{
-			width:100%;
-			position:absolute;
-			top:-40%;
-			}
-			#num1{
-				top:-15%;
-			}
-			#num3{
-				top:-20%;
-			}
-		
-		#num4, #num5{
-			-webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
-		}
-	}
-
-		/*avoid scrolling in loading page*/
-		html,
-		body {
-			overflow: hidden;
-			height: 100%;
-			scroll-behavior: smooth;
-		}
-
-
-		        .text1_20 {
-            line-height: 2;
-            color: rgb(49, 49, 49);
-            padding: 15px;
-            font-size: 16px;
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            text-align: justify;
-		}
-		
-		hr {
-            width: 80%;
-            height: 5px;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: #333;
-            border: 0 none;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            border-radius: 2px;
-		}
-		
-
-
-		/*hovering over iframes*/
-		/* Iframe wrapper that allows to make youtube iframe responsive */
-.iframe-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 15px;
-  height: 0;
-  max-width: 400px;
-}
-
-
-/* Adding pseudo element to iframe parent */
-.iframe-wrapper:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: block;
-}
-
-/* Adding hover effect to pseudo element */
-.iframe-wrapper:hover:after {
-  content: none;
-}
-
-.carousel-caption{
-	bottom: 90px;
-}
-	</style>
-
-
-</head>
-<!-- Bootstrap CSS -->
-
-<body class="demo" onClick="">
-	<!--[if lt IE 7]>
-        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-
-	<!-- Demo content -->
-
-
-	<!--header class="entry-header">
+<div class="jumbotron full-screen" style="background-size: 100% 100%;">
+  <div id="video-placer"></div>
+  <!-- Added poster attribute and broke the src link to video and also commented out the script for video -->
+  <video preload autoplay="autoplay" id="video-background" poster="/media/img/pipets.png" muted loop> <!-- Add poster for mobile because of high resolution.-->
+    <!-- ALSO ADD WEBM FORMAT! source src="/assets/video/cover-video.WebM" type="video/WebM"https://diveintohtml5.info/video.html -->
+    <!-- ios problems: Make MP4 first, and doesn't recognize video if has the poster attribute, this is on ios4.0 or below-->
+    <source src="/media/video/cove.mp4" type="video/mp4">
+  </video>
+  <!--THIS WAS COMMENTED OUT script>
+    $(function() {
+      //add video tag
+      //  $("#video-placer").html('<video preload id="video-background" muted loop><source src="/media/video/cover-video.mp4" type="video/mp4"></video>');
+        vid = document.getElementById("video-background");
+      //listen for CANPLAY event
+      vid.onloadstart = function(){console.log("Started!")};
+      vid.onloadedmetadata = function(){console.log("meta!")};
+      vid.onloadeddata = function(){console.log("data!")};
+      vid.onprogress = function(){console.log("progress!")};
+      vid.oncanplay = function(){
+        console.log("Hey")
+      };
+      vid.oncanplaythrough = function(){
+     //   console.log("Finish");
+        setTimeout(function() {
+       //   console.log("play");
+      //Hit PLAY when video fully loaded
+         vid.play();
+        }, 1000);
         
-                    <nav class="back-link">
-                        <span class="nav-previous"><a href="http://ihatetomatoes.net/create-css3-spinning-preloader/" rel="prev"><span class="meta-nav">&larr;</span> Back to tutorial</a></span>
-                    </nav>
-        
-                    <h1 class="entry-title">Puja el volum</h1>
-                </header-->
-
-	<header class="entry-header" id="loader-recommendation">
-		<p style="display:none" id="appear1">Personal page design is being renewed</p>
-		<p style="display:none" id="appear3"></p>
-		<p style="display:none" id="appear2">Come back to see the modernized version on 31th April 2019</p>
-	</header>
-
-	<div id="loader-wrapper">
-		<div id="loader"></div>
-
-		<div class="loader-section section-left"></div>
-		<div class="loader-section section-right"></div>
-
-	</div>
+      };
 
 
-	<!--div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img class="d-block carouselGallery" id="num1" src="img/1.jpg" alt="First slide">
-				<div class="carousel-caption d-none d-block">
-						<h5 style="display:none; color: rgb(192, 192, 192);" id="pleaseScroll">Desplaça cap abaix...</h5>
-					  </div>
-			</div>
-			<div class="carousel-item">
-					<img class="d-block carouselGallery" id="num3" src="img/4.jpg" alt="Third slide">
-					<div class="carousel-caption d-none d-block">
-						<h5 style="color: rgb(192, 192, 192);">Desplaça cap abaix...</h5>
-					  </div>
-				</div>
-			<div class="carousel-item">
-				<img class="d-block carouselGallery" src="img/3.jpg" alt="Second slide">
-				<div class="carousel-caption d-none d-block">
-					<h5 style="color: rgb(192, 192, 192);">Desplaça cap abaix...</h5>
-				  </div>
-			</div>			
-			<div class="carousel-item">
-					<img class="d-block carouselGallery" id="num5" src="img/2.jpg" alt="Third slide">
-					<div class="carousel-caption d-none d-block">
-						<h5 style="color: rgb(192, 192, 192);">Desplaça cap abaix...</h5>
-					  </div>
-				</div>
-			<div class="carousel-item">
-				<img class="d-block carouselGallery" id="num4" src="img/5.jpg" alt="Third slide">
-				<div class="carousel-caption d-none d-block">
-					<h5 style="color: rgb(192, 192, 192);">Desplaça cap abaix...</h5>
-				  </div>
-			</div>
-			<div class="carousel-item">
-				<img class="d-block carouselGallery" id="num5" src="img/6.jpg" alt="Third slide">
-				<div class="carousel-caption d-none d-block">
-					<h5 style="color: rgb(192, 192, 192);">Desplaça cap abaix...</h5>
-				  </div>
-			</div>
-		</div>
-		<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
-	</div-->
+      //  vid.addEventListener("canplay", function() {
+      //   console.log("oncanplay");
+      //   setTimeout(function() {
+      //    console.log("play");
+      //Hit PLAY when video fully loaded
+       //   vid.play();
+        // }, 5);
+       // });
+       });
+    </script-->
+  <div class="overbackground"></div>
+  <div class="container" id="jumb-home-container">
+    <div class="row h-100">
+      <div class="col-12 my-auto">
+        <p class="title-small theme-col">Marc Expòsit Goy</p> <!-- theme-col to change its color depending on AGCT -->
+        <h1 class="mb-6 underlined-h1">
+          <!-- control distance of h1 and parraph with mb (margin bottom, bootstrap) -->
+          <span>I'm a scientist.</span><br>
+          <span>I write about it.</span></h1>
+        <p class="lead">The dialog between science, technology and society is pivotal in the era of gene editing. Scientific discoveries must be presented to the public in an accessible way by scientists ourselves, and this is what I try to do.<!-- or exchange of ideas. And you, even if you don't consider yourself a scientist, should also talk about it. My interest in science goes further than making research in the lab. I want to translate
+          research from the bench to society. I am convinced research and social needs need to exchange ideas to achieve
+          so.--> <a href="/index.html#web-map">Know more about me</a></p>
+        <!--p><a href="http://www.YourLinkHere.com" class="btn btn-primary btn-lg">Learn more &raquo;</a></p-->
+      </div>
+    </div>
+  </div>
+  <div class="scroll_down">
+      <a href="/index.html#web-map" class="scroll">
+          <i class="mbri-arrow-down text-white"></i>
+      </a>
+  </div>
+</div>
+
+<section>
+  <div class="container" id="web-map">
+    <div class="row"> <!-- justify-content-md-center Add class? -->
+      <div class="col-sm-6 col-md-3 presentation">
+        <a href="#abit_about"><i class="fas fa-flask"></i></a>
+        <h3>About Me</h3>
+        <p>Interested in why I created this blog? The five Ws about me.</p>
+      </div>
+      <div class="col-sm-6 col-md-3 presentation">
+          <a href="#blogPostResume"><i class="fas fa-edit"></i></a>
+          <h3>Blog</h3>
+          <p>Read about synthetic biology, genetics and medicine, my life in Boston, science and ethics.</p>
+      </div>
+      <div class="col-sm-6 col-md-3 presentation">
+          <a href="" style="pointer-events: none; cursor: default;"><i class="fas fa-dna"></i></a>
+          <h3>DNA encoder</h3>
+          <p>Convert written messages into DNA strings that could be replicated by a living organism. Coming soon.</p>
+      </div>
+      <div class="col-sm-6 col-md-3 presentation">
+          <a href="#contactme_index"><i class="fas fa-comments"></i></a>
+          <h3>Contact</h3>
+          <p>All points of view are insteresting and valid. I'd love to know yours. Get in touch!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>  
+  <div id="abit_about" class="full-paralax" style="background-image: url(/media/img/me_up.jpg)">
+    <div class="over-image left-half">
+        <div class="col-12 my-auto">
+            <p class="title-small theme-col">A little bit</p> <!-- theme-col to change its color depending on AGCT -->
+            <h2 class="mb-6 underlined-h1">
+              <!-- control distance of h1 and parraph with mb (margin bottom, bootstrap) -->
+              <span>About Me</span></h1>
+            <p class="lead">Hi! I'm currently doing research at <a href="https://www.gehrkelab.org/">Gehrke Lab</a> in MIT (Massachusetts Institute of Technology), as part of the <a href="https://www.iqs.edu/en/masters/master-bioengineering">Master's in Bioengineering</a> program from IQS. I'm using synthetic biology to develop a point-of-care rapid diagnostic test to address emerging viral outbreaks.<br>
+              I believe the exchange of ideas between science and society is essential to the advancement of society through research: science should adress social needs and society should pay attention to the possibilities science offers.<br>This is why I'm commited to science outreach by posting comments about recent biotechnology breakthroughs in <a href="https://www.facebook.com/ASBTEC">ASBTEC</a>'s social networks.<br>
+              This blog is focused on explaining how synthetic biology is reinventing nature (including ourselves) and its social and medical implications, using a lenguage that everybody understands while being true to the facts. Occasionally I will also share some professional and personal experiences that have shaped my point of view. 
+              <!--a href="/index.html#web-map">Know more about me</a></p-->
+            <!--p><a href="http://www.YourLinkHere.com" class="btn btn-primary btn-lg">Learn more &raquo;</a></p-->
+          </div>
+          <!-- dd to the objects which color has to be changed a class like "theme-color", which defines its color. Pick standard color in case JS was not working.
+                Then, after calculating the base of the day, assign a color depending on the base and specify the script to get all elements of this class and define its color properity to the variable, so all elements will be of the new color!
+                https://www.w3schools.com/jsref/prop_sty  -->
+
+        <!--div class="two spacing"></div>
+        <div class="section-header alt white">
+          <h2>client focused</h2>
+        </div>
+        <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cupiditate rem aspernatur eos tempora corporis cum consequuntur quasi explicabo, aut omnis, pariatur minus numquam deserunt reprehenderit dignissimos illum voluptas animi!</p>
+        <p class="light">Dolor sit amet, consectetur adipisicing elit. Quod, eius optio eum hic dicta veritatis voluptates nisi amet nulla at!</p>
+        <div class="two spacing"></div>
+        <a href="#" class="button small">Meat the team</a>
+        <div class="three spacing"></div-->
+    </div>
+  </div>
+  <!---div class="container" id="jumb-home-container"> WHAT IS THIS? mAYBE TO MAKE SPACE
+  <div class="row h-100"></div></div-->
+</section>
+
+<section>
+<div class="container" id="blogPostResume">
+  <div class="row justify-content-center noflex">
+    <a href="blogconstruction.html"><h2 id="BlogTitle"><div class="line"></div>Blog<div class="line"></div></h2></a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+
+    
+
+{% for post in site.posts limit : 4 %}
+
+        <article class="post-preview">
+          
+          <a href="blogconstruction.html">
+          <!-- a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}"-->
+            <h2 class="post-title">{{ post.title }}</h2>
+            {% if post.subtitle %}
+            <p class="lead-subtitle post-subtitle">{{ post.subtitle }}</p>
+            {% else %}
+            <p class="lead-subtitle post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+            <!-- DEFAULT WAS H3, I USE P LEAD h3 class="post-subtitle">{{ post.subtitle }}</h3>
+            {% else %}
+            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3-->
+            {% endif %}
+          </a>
+          <p class="post-meta">Posted <!--by
+            {% if post.author %}
+            {{ post.author }}
+            {% else %}
+            {{ site.author }}
+            {% endif %}-->
+            on
+            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}</p>
+        </article>
+
+        <hr>
+
+        {% endfor %}
+      </div>
+  </div>
+  <!--div class="row">
+      <button type="button" class="btn btn-primary float-right">Primary</button>
+    </div>
+  </div-->
+</section>
 
 
-	<!--div id="content">
-			<hr style="margin-top: 25px">
-		<div class="text1_20">
-			<p>
-				Els flocs de neu cauen amb melancolia enyorant el terra que els acull. Junts, formen una delicada capa
-				sobre el ciment fred. Un a un, esborren les petjades dels vianants que van d’aquí cap allà buscant la
-				calor. Son les 6:30 p.m. i fa rato que està sol al laboratori. Agafa la maleta i canvia el gorro i els
-				guants per l’ordinador i la llibreta. El laboratori té quatre interruptors per la llum. Tot i que els
-				apaga
-				tots, els fluorescents que sempre queden encesos li donen a la fusta de les poiates el to ombrívol del
-				qui
-				espera l’endemà mantenint viva la flama.</p>
-			<p>Nota l’aire fred del carrer tan sols obrir la porta del vestíbul i recorda l’escalfor d’aquella
-				cafeteria.
-				Les puntes dels dits s’agafen al manillar de la bici com si fos aquella tassa de xocolata calenta que
-				van
-				compartir. Parat al semàfor, en el baf que treu a conseqüència del fred li sembla veure
-				les
-				paraules dolces que els seus llavis deixaven anar a l’aire. Pedalada rere pedalada, la neu que nota a
-				les
-				galtes es desfà com si aquestes retinguessin l’escalfor dels seus llavis.</p>
-			<p>Travessa el parc resseguint la mitja claror de les faroles que es cola entre les branques sense fulles
-				dels aurons. Passa per Cambridge street fins arribar a Thorndike street. Es para al número 131 i deixa
-				la bici. S’acosta a la porta i cada petjada que deixa passa a formar part del retrat. Gira el pany de
-				la porta, a poc a poc però sense pausa, com si per fi fes anar l’engranatge que mou les agulles d’un rellotge
-				aturat. Es
-				treu les sabates deixant enrere la melancolia que l'ha acompanyat tot el dia. Camina cap a la cuina i al seu cap
-				només hi és
-				ella. La veu: està d’esquenes. L’abraça pel darrere i li xiuxiueja a l’orella: “No és el que
-				passa quan no estàs amb mi, és el que queda de tu en mi quan no hi ets. T’he enyorat tot el dia...”.</p>
-		</div>
-		<hr>
-		<div class="text1_20"></div>
-		<h5 style="text-align: center">mt. marcy - i miss you</h5>
-		</div>
-		<div class="row">
-			<div class="col">
-        <audio style="margin:auto; display:block; margin-bottom:50px" id="missu" src="img/I_miss.mp3" controls preload="auto"
-            loop></audio>
-		</div>
-	</div-->
-		<div style="position:relative;padding-top:56.25%;">
-				<iframe src="https://www.youtube.com/embed/F6VnkwBBI1k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-				  style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-		</div>
-	</div>
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<!--script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-	 crossorigin="anonymous"></script-->
-	 <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-	 crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-	 crossorigin="anonymous"></script>
+<section>  
+    <div id="contactme_index" class="full-paralax" style="background-image: url(/media/img/w.jpg)">
+      <div class="over-image minimum-height d-flex">
+        <div class="row mx-auto">
+          <div class="col-12 my-auto">
+              <!--p class="title-small theme-col">A little bit</p>  theme-col to change its color depending on AGCT -->
+              <h2 class="mb-6 underlined-h1" id="contactmeTitle">
+                <!-- control distance of h1 and parraph with mb (margin bottom, bootstrap) -->
+                <span>Contact me</span></h1>
+                <!-- Get in touch tambe esta be -->
+                <!--Afegir un subtítol: CANVIAR AIXÒ PER UNA CLASSE DE SUBTÍTOL... CENTRAT. i EL SEND ME A MESSAGE COM A SEGONA LINIA -->
+              <p class="lead">Get involved! Discussing science is everyone's business. I'would love to hear your ideas.<!--a href="correu_mail, spam!">Send me a message</a></p-->
+              <!--p><a href="http://www.YourLinkHere.com" class="btn btn-primary btn-lg">Learn more &raquo;</a></p-->
+            </div>
 
-	<!--script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script-->
-	<!--script type="text/javascript" src="js/main.js"></script-->
-
-
-
-	<!-- I try to make the content of the blog accessible to the non-scientific community while keeping the interest and thoroughness -->
-
-    <script>
-        $('#appear1').fadeIn("slow");
-        setTimeout(function () {
-            $('#appear2').fadeIn("slow");
-        }, 1000);
-    </script>
-
-
-</body>
-
-</html>
+            <div class="container" id="social-media-icons">
+              <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                  <ul class="list-inline text-center">
+                    {% if site.facebook_username %}
+                    <li class="list-inline-item">
+                      <a href="https://www.facebook.com/{{ site.facebook_username }}">
+                        <span class="fa-stack fa-lg">
+                          <i class="fas fa-circle fa-stack-2x"></i>
+                          <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    {% endif %}
+                    {% if site.linkedin_username %}
+                    <li class="list-inline-item">
+                      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
+                        <span class="fa-stack fa-lg">
+                          <i class="fas fa-circle fa-stack-2x"></i>
+                          <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    {% endif %}
+                    {% if site.twitter_username %}
+                    <li class="list-inline-item">
+                      <a href="https://www.twitter.com/{{ site.twitter_username }}">
+                        <span class="fa-stack fa-lg">
+                          <i class="fas fa-circle fa-stack-2x"></i>
+                          <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    {% endif %}
+                    <!--
+                      VERSION WITH SQUARE
+                      
+                    {% if site.linkedin_username %}
+                    <li class="list-inline-item">
+                      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
+                        <span class="fa-stack fa-lg">
+                          <i class="fas fa-circle fa-stack-2x"></i>
+                          <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    {% endif %}-->
+                    {% if site.github_username %}
+                    <li class="list-inline-item">
+                      <a href="https://github.com/{{ site.github_username }}">
+                        <span class="fa-stack fa-lg">
+                          <i class="fas fa-circle fa-stack-2x"></i>
+                          <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    {% endif %}
+                  </ul>
+                  <!--p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p-->
+                </div>
+              </div>
+            </div></div>
+          </footer>
+  
+      </div>
+    </div>
+  </section>
