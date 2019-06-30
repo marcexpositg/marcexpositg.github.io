@@ -411,6 +411,9 @@ a {
         }
       }
 
+    @media only screen and (max-width: 768px) {
+        #twitter-widget-0 {height:380px !important;}
+}
 // Contact me
 #contactmeTitle{ //Based on blog title,     
 text-align: center; //This has been aded and is not on blog tile
@@ -457,3 +460,4 @@ font-weight: 700;
     }
 }
 // Change the default font
+
