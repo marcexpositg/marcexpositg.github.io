@@ -1,21 +1,24 @@
+This is the personal site for Marc Expòsit Goy.
 
-# Boostrap 4 Github Pages
+## How to upload it to GitHub pages for the first time?
 
-[![Build Status](https://travis-ci.org/nicolas-van/bootstrap-4-github-pages.svg?branch=master)](https://travis-ci.org/nicolas-van/bootstrap-4-github-pages)
+- https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line
+- https://help.github.com/en/github/using-git/setting-your-username-in-git
 
-A [Bootstrap 4](https://getbootstrap.com/) start up project for [Github Pages](https://pages.github.com/) and [Jekyll](https://jekyllrb.com/).
-
-* A full Bootstrap 4 theme usable both on Github Pages and with a standalone Jekyll.
-* Recompiles Bootstrap from SCSS files, which allows to customize Bootstrap's variables and use Bootstrap themes.
-* Full support of Bootstrap's JavaScript plugins.
-* Supports all features of Github Pages and Jekyll.
-
-[See the website for demonstration and documentation](https://nicolas-van.github.io/bootstrap-4-github-pages/).
-
-## Contribution
-
-[See the contribution guide.](./CONTRIBUTING.md)
-
-## License
-
-[See the license file.](./LICENSE.md)
+1. Install Git
+2. Configure git
+    1. git config --global user.name "your github user name"   -> to set your git username for github
+3. Download previous repository
+    1. The repository with the website has the name "marcexpositg.github.io". If it already has some content online it's easier to download it and create a folder locally.
+    2. Clone the repository by following the instructions https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository
+    3. Briefly, create a folder named "marcexpositg.github.io" where you want your website to be in your PC.
+    4. Open it with VSCode, and open the terminal with (Ctrl + ñ).
+    5. Copy the link of your github repository under "clone or download" and use it as:
+    6. git clone *link of the website*
+4. Delete all contents of the folder to delete the previous website
+5. Copy the contents of the new website into that folder
+6. Commit changes
+   1. git add .
+   2. git commit -m "2020 version of website v0.1"
+7. Upload changes
+   1. 

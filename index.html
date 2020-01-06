@@ -1,271 +1,119 @@
----
-layout: adapted
----
+<!doctype html>
+<html lang="en">
 
-<div class="jumbotron full-screen" style="background-size: 100% 100%;">
-  <div id="video-placer"></div>
-  <!-- Added poster attribute and broke the src link to video and also commented out the script for video -->
-  <video preload autoplay="autoplay" id="video-background" poster="/media/img/pipets.png" muted loop> <!-- Add poster for mobile because of high resolution.-->
-    <!-- ALSO ADD WEBM FORMAT! source src="/assets/video/cover-video.WebM" type="video/WebM"https://diveintohtml5.info/video.html -->
-    <!-- ios problems: Make MP4 first, and doesn't recognize video if has the poster attribute, this is on ios4.0 or below-->
-    <source src="/media/video/cove.mp4" type="video/mp4">
-  </video>
-  <!--THIS WAS COMMENTED OUT script>
-    $(function() {
-      //add video tag
-      //  $("#video-placer").html('<video preload id="video-background" muted loop><source src="/media/video/cover-video.mp4" type="video/mp4"></video>');
-        vid = document.getElementById("video-background");
-      //listen for CANPLAY event
-      vid.onloadstart = function(){console.log("Started!")};
-      vid.onloadedmetadata = function(){console.log("meta!")};
-      vid.onloadeddata = function(){console.log("data!")};
-      vid.onprogress = function(){console.log("progress!")};
-      vid.oncanplay = function(){
-        console.log("Hey")
-      };
-      vid.oncanplaythrough = function(){
-     //   console.log("Finish");
-        setTimeout(function() {
-       //   console.log("play");
-      //Hit PLAY when video fully loaded
-         vid.play();
-        }, 1000);
-        
-      };
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/fa.css">
 
-      //  vid.addEventListener("canplay", function() {
-      //   console.log("oncanplay");
-      //   setTimeout(function() {
-      //    console.log("play");
-      //Hit PLAY when video fully loaded
-       //   vid.play();
-        // }, 5);
-       // });
-       });
-    </script-->
-  <div class="overbackground"></div>
-  <div class="container" id="jumb-home-container">
-    <div class="row h-100">
-      <div class="col-12 my-auto">
-        <p class="title-small theme-col">Marc Expòsit Goy</p> <!-- theme-col to change its color depending on AGCT -->
-        <h1 class="mb-6 underlined-h1">
-          <!-- control distance of h1 and parraph with mb (margin bottom, bootstrap) -->
-          <span>I'm a scientist.</span><br>
-          <span>I write about it.</span></h1>
-        <p class="lead">The dialog between science, technology and society is pivotal in the era of gene editing. Scientific discoveries must be presented to the public in an accessible way by scientists ourselves, and this is what I try to do.<!-- or exchange of ideas. And you, even if you don't consider yourself a scientist, should also talk about it. My interest in science goes further than making research in the lab. I want to translate
-          research from the bench to society. I am convinced research and social needs need to exchange ideas to achieve
-          so.--> <a href="/index.html#web-map">Know more about me</a></p>
-        <!--p><a href="http://www.YourLinkHere.com" class="btn btn-primary btn-lg">Learn more &raquo;</a></p-->
-      </div>
+  <title>Marc Expòsit Goy</title>
+
+</head>
+
+<body>
+
+  <div class="title-pad d-none d-md-block">
+    <div class="container text-center WS_title">
+      Marc Expòsit Goy
     </div>
   </div>
-  <div class="scroll_down">
-      <a href="/index.html#web-map" class="scroll">
-          <i class="mbri-arrow-down text-white"></i>
-      </a>
-  </div>
-</div>
 
-<section>
-  <div class="container" id="web-map">
-    <div class="row"> <!-- justify-content-md-center Add class? -->
-      <div class="col-sm-6 col-md-3 presentation">
-        <a href="#abit_about"><i class="fas fa-flask"></i></a>
-        <h3>About Me</h3>
-        <p>Interested in why I created this blog? The five Ws about me.</p>
-      </div>
-      <div class="col-sm-6 col-md-3 presentation">
-          <a href="#blogPostResume"><i class="fas fa-edit"></i></a>
-          <h3>Blog</h3>
-          <p>Read about synthetic biology, genetics and medicine, my life in Boston, science and ethics.</p>
-      </div>
-      <div class="col-sm-6 col-md-3 presentation">
-          <a href="" style="pointer-events: none; cursor: default;"><i class="fas fa-dna"></i></a>
-          <h3>DNA encoder</h3>
-          <p>Convert written messages into DNA strings that could be replicated by a living organism. Coming soon.</p>
-      </div>
-      <div class="col-sm-6 col-md-3 presentation">
-          <a href="#contactme_index"><i class="fas fa-comments"></i></a>
-          <h3>Contact</h3>
-          <p>All points of view are insteresting and valid. I'd love to know yours. Get in touch!</p>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-opac">
+
+    <a class="navbar-brand d-md-none WS_title" href="#">Marc Expòsit Goy</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto mr-auto">
+        <li class="nav-item pr-5 pl-5 active">
+          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item pr-5 pl-5">
+          <a class="nav-link" href="/research.html">Research</a>
+        </li>
+        <!--li class="nav-item pr-5 pl-5">
+          <a class="nav-link" href="/outreach.html">Outreach</a>
+        </li-->
+        <li class="nav-item pr-5 pl-5">
+          <a class="nav-link" href="/resume.html">Resume</a>
+        </li>
+        <li class="nav-item pr-5 pl-5">
+          <a class="nav-link" href="/contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container content">
+    <div class="row">
+      <div class="col-12 py-3 text-center">
+        <h4><i>Translating synthetic biology advances into health solutions</i></h4>
       </div>
     </div>
-  </div>
-</section>
 
-<section>  
-  <div id="abit_about" class="full-paralax" style="background-image: url(/media/img/me_up.jpg)">
-    <div class="over-image left-half">
-        <div class="col-12 my-auto">
-            <p class="title-small theme-col">A little bit</p> <!-- theme-col to change its color depending on AGCT -->
-            <h2 class="mb-6 underlined-h1">
-              <!-- control distance of h1 and parraph with mb (margin bottom, bootstrap) -->
-              <span>About Me</span></h1>
-            <p class="lead">Hi! I'm currently doing research at <a href="https://www.gehrkelab.org/">Gehrke Lab</a> in MIT (Massachusetts Institute of Technology), as part of the <a href="https://www.iqs.edu/en/masters/master-bioengineering">Master's in Bioengineering</a> program from IQS. I'm using synthetic biology to develop a point-of-care rapid diagnostic test to address emerging viral outbreaks.<br>
-              I believe the exchange of ideas between science and society is essential to the advancement of society through research: science should adress social needs and society should pay attention to the possibilities science offers.<br>This is why I'm commited to science outreach by posting comments about recent biotechnology breakthroughs in <a href="https://www.facebook.com/ASBTEC">ASBTEC</a>'s social networks.<br>
-              This blog is focused on explaining how synthetic biology is reinventing nature (including ourselves) and its social and medical implications, using a lenguage that everybody understands while being true to the facts. Occasionally I will also share some professional and personal experiences that have shaped my point of view. 
-              <!--a href="/index.html#web-map">Know more about me</a></p-->
-            <!--p><a href="http://www.YourLinkHere.com" class="btn btn-primary btn-lg">Learn more &raquo;</a></p-->
-          </div>
-          <!-- dd to the objects which color has to be changed a class like "theme-color", which defines its color. Pick standard color in case JS was not working.
-                Then, after calculating the base of the day, assign a color depending on the base and specify the script to get all elements of this class and define its color properity to the variable, so all elements will be of the new color!
-                https://www.w3schools.com/jsref/prop_sty  -->
 
-        <!--div class="two spacing"></div>
-        <div class="section-header alt white">
-          <h2>client focused</h2>
+    <div class="row">
+      <div class="col-12 py-3">
+
+        <div class="col-md-4 float-right p-3">
+          <img src="img/profile.jpg" class="img-fluid rounded float-right">
         </div>
-        <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cupiditate rem aspernatur eos tempora corporis cum consequuntur quasi explicabo, aut omnis, pariatur minus numquam deserunt reprehenderit dignissimos illum voluptas animi!</p>
-        <p class="light">Dolor sit amet, consectetur adipisicing elit. Quod, eius optio eum hic dicta veritatis voluptates nisi amet nulla at!</p>
-        <div class="two spacing"></div>
-        <a href="#" class="button small">Meat the team</a>
-        <div class="three spacing"></div-->
-    </div>
-  </div>
-  <!---div class="container" id="jumb-home-container"> WHAT IS THIS? mAYBE TO MAKE SPACE
-  <div class="row h-100"></div></div-->
-</section>
-
-<section>
-<div class="container" id="blogPostResume">
-  <div class="row justify-content-center noflex">
-    <a href="blogconstruction.html"><h2 id="BlogTitle"><div class="line"></div>Blog<div class="line"></div></h2></a>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
-
-    
-
-{% for post in site.posts limit : 4 %}
-
-        <article class="post-preview">
-          
-          <a href="blogconstruction.html">
-          <!-- a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}"-->
-            <h2 class="post-title">{{ post.title }}</h2>
-            {% if post.subtitle %}
-            <p class="lead-subtitle post-subtitle">{{ post.subtitle }}</p>
-            {% else %}
-            <p class="lead-subtitle post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
-            <!-- DEFAULT WAS H3, I USE P LEAD h3 class="post-subtitle">{{ post.subtitle }}</h3>
-            {% else %}
-            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3-->
-            {% endif %}
-          </a>
-          <p class="post-meta">Posted <!--by
-            {% if post.author %}
-            {{ post.author }}
-            {% else %}
-            {{ site.author }}
-            {% endif %}-->
-            on
-            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}</p>
-        </article>
-
-        <hr>
-
-        {% endfor %}
+        <div class="col-md-8 float-left">
+          <p>I am a biological engineer interested in advancing healthcare by understanding and designing biology. My
+            scientist-engineer approach provides me a valuable perspective to bring research solutions to the real
+            world. For instance, during my stay at MIT with <!--a href="https://www.gehrkelab.org/"-->Prof. Lee Gehrke<!--a-->, I improved current surveillance strategies
+            for emerging viruses such as Zika or Dengue by reducing the <a href="/research.html#GehrkeLab">development time and cost</a> of paper-based
+            diagnostic tests. Before that, I started and led a team of 12 students to develop a <a href="/research.html#BioIQSIGEMTeam">personalized gluten
+            sensor</a> for celiac patients, which was awarded with the Bronze Medal in the 2018 <!--a href="http://2018.igem.org/Team:BioIQS-Barcelona"-->iGEM competition<!--a-->. Currently,
+            I am a master’s student solving health problems by combining <a href="/research.html#TransSynBio">synthetic biology and bioinformatics</a> in the
+            laboratory of <!--a href="https://www.upf.edu/web/synbio"-->Prof. Marc Güell<!--/a-->. Being awarded with the “La Caixa” fellowship to develop my PhD studies in
+            the US, I look forward to strengthening my skills in bioengineering with the objective of improving
+            healthcare through research.</p>
+        </div>
       </div>
-  </div>
-  <!--div class="row">
-      <button type="button" class="btn btn-primary float-right">Primary</button>
-    </div>
-  </div-->
-</section>
 
-<section>
+    </div>
+    <!--/row-->
+  </div>
+  <!--container-->
+
+  <div class="footer">
     <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-  <a class="twitter-timeline" data-height="700" href="https://twitter.com/marc_exposit?ref_src=twsrc%5Etfw">Tweets by marc_exposit</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-</div>
-</div>
-</section>
-
-<section>  
-    <div id="contactme_index" class="full-paralax" style="background-image: url(/media/img/w.jpg)">
-      <div class="over-image minimum-height d-flex">
-        <div class="row mx-auto">
-          <div class="col-12 my-auto">
-              <!--p class="title-small theme-col">A little bit</p>  theme-col to change its color depending on AGCT -->
-              <h2 class="mb-6 underlined-h1" id="contactmeTitle">
-                <!-- control distance of h1 and parraph with mb (margin bottom, bootstrap) -->
-                <span>Contact me</span></h1>
-                <!-- Get in touch tambe esta be -->
-                <!--Afegir un subtítol: CANVIAR AIXÒ PER UNA CLASSE DE SUBTÍTOL... CENTRAT. i EL SEND ME A MESSAGE COM A SEGONA LINIA -->
-              <p class="lead">Get involved! Discussing science is everyone's business. I'would love to hear your ideas.<!--a href="correu_mail, spam!">Send me a message</a></p-->
-              <!--p><a href="http://www.YourLinkHere.com" class="btn btn-primary btn-lg">Learn more &raquo;</a></p-->
-            </div>
-
-            <div class="container" id="social-media-icons">
-              <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                  <ul class="list-inline text-center">
-                    {% if site.facebook_username %}
-                    <li class="list-inline-item">
-                      <a href="https://www.facebook.com/{{ site.facebook_username }}">
-                        <span class="fa-stack fa-lg">
-                          <i class="fas fa-circle fa-stack-2x"></i>
-                          <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                        </span>
-                      </a>
-                    </li>
-                    {% endif %}
-                    {% if site.linkedin_username %}
-                    <li class="list-inline-item">
-                      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
-                        <span class="fa-stack fa-lg">
-                          <i class="fas fa-circle fa-stack-2x"></i>
-                          <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
-                        </span>
-                      </a>
-                    </li>
-                    {% endif %}
-                    {% if site.twitter_username %}
-                    <li class="list-inline-item">
-                      <a href="https://www.twitter.com/{{ site.twitter_username }}">
-                        <span class="fa-stack fa-lg">
-                          <i class="fas fa-circle fa-stack-2x"></i>
-                          <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                        </span>
-                      </a>
-                    </li>
-                    {% endif %}
-                    <!--
-                      VERSION WITH SQUARE
-                      
-                    {% if site.linkedin_username %}
-                    <li class="list-inline-item">
-                      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
-                        <span class="fa-stack fa-lg">
-                          <i class="fas fa-circle fa-stack-2x"></i>
-                          <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-                        </span>
-                      </a>
-                    </li>
-                    {% endif %}-->
-                    {% if site.github_username %}
-                    <li class="list-inline-item">
-                      <a href="https://github.com/{{ site.github_username }}">
-                        <span class="fa-stack fa-lg">
-                          <i class="fas fa-circle fa-stack-2x"></i>
-                          <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                      </a>
-                    </li>
-                    {% endif %}
-                  </ul>
-                  <!--p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p-->
-                </div>
-              </div>
-            </div></div>
-          </footer>
-  
+      <div class="row text-center">
+        <div class="col-12 py-5">
+          <a href="https://twitter.com/marc_exposit"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/mexposit/"><i class="fab fa-linkedin"></i></a>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="function.js"></script>
+</body>
+
+</html>
