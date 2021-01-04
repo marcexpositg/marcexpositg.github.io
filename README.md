@@ -7,7 +7,7 @@ This is the personal site for Marc Expòsit Goy.
 
 1. Install Git
 2. Configure git
-    1. git config --global user.name "your github user name"   -> to set your git username for github
+    1. git config --global user.name "your github user name"   -> to set your git username for github, you will be asked for the password later
 3. Download previous repository
     1. The repository with the website has the name "marcexpositg.github.io". If it already has some content online it's easier to download it and create a folder locally.
     2. Clone the repository by following the instructions https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository
@@ -21,4 +21,15 @@ This is the personal site for Marc Expòsit Goy.
    1. git add .
    2. git commit -m "2020 version of website v0.1"
 7. Upload changes
-   1. 
+   1. git push -u origin
+
+## How to upload changes from now on?
+
+1. Simply commit and upload:
+   1. git add .
+   2. git commit -m "2020 version of website v0.2"
+   3. git push -u origin
+
+## How to see the page locally?
+
+Run `python3 -m http.server 8000 &` to have it running on the background.
